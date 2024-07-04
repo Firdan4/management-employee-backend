@@ -214,7 +214,6 @@ export const signOut = async (req: Request, res: Response) => {
   );
 
   res.clearCookie("refreshToken");
-  res.end();
   res.status(200).send({
     message: "Logout successfully",
   });

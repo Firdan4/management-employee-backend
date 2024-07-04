@@ -45,7 +45,7 @@ Employee.init(
       type: DataTypes.STRING,
     },
     devisi_id: {
-      allowNull: false,
+      // allowNull: false,
       type: DataTypes.INTEGER,
     },
     position: {
@@ -55,8 +55,10 @@ Employee.init(
   },
   {
     sequelize: connection,
-    tableName: "employee",
+    tableName: "employees",
     timestamps: true,
     underscored: false,
   }
 );
+
+export default Employee;
