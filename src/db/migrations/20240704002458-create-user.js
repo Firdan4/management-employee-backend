@@ -18,6 +18,13 @@ module.exports = {
       email: {
         type: Sequelize.STRING,
       },
+      password: {
+        type: Sequelize.STRING,
+      },
+      refrashToken: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

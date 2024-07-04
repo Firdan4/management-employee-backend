@@ -7,6 +7,8 @@ interface UserAttributes {
   firstName?: string;
   lastName?: string;
   email?: string;
+  password?: string;
+  refrashToken?: string | null;
 
   createdAt?: Date;
   updatedAt?: Date;
@@ -20,6 +22,8 @@ class User extends Model<UserAttributes, UserInput> implements UserAttributes {
   public firstName!: string;
   public lastName!: string;
   public email!: string;
+  public password!: string;
+  public refrashToken!: string | null;
 
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
@@ -44,6 +48,14 @@ User?.init(
     email: {
       allowNull: false,
       unique: true,
+      type: DataTypes.STRING,
+    },
+    password: {
+      allowNull: false,
+      type: DataTypes.STRING,
+    },
+    refrashToken: {
+      allowNull: true,
       type: DataTypes.STRING,
     },
   },
